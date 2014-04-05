@@ -467,13 +467,13 @@ this["FirechatDefaultTemplates"]["templates/user-search-list-item.html"] = funct
         },
         newMessageRef;
 
-    if (!self._user) {
-      self._onAuthRequired();
-      if (cb) {
-        cb(new Error('Not authenticated or user not set!'));
-      }
-      return;
-    }
+    // if (!self._user) {
+    //   self._onAuthRequired();
+    //   if (cb) {
+    //     cb(new Error('Not authenticated or user not set!'));
+    //   }
+    //   return;
+    // }
 
     newMessageRef = self._messageRef.child(roomId).push();
     newMessageRef.setWithPriority(message, Firebase.ServerValue.TIMESTAMP, cb);
